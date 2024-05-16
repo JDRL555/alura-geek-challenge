@@ -21,28 +21,7 @@
       <h2>Mis productos</h2>
       <span>+</span>
     </section>
-    <ul class="productList">
-      <li class="productCard">
-        <div class="productImg img" style="background: url(./assets/cuchao.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
-        <h3 class="productTitle">
-          Cuchao
-        </h3>
-        <section class="productDetails">
-          <p class="productPrice">$ 20,00</p>
-          <img src="./assets/trash.png" class="trashImg" alt="trash">
-        </section>
-      </li>
-      <li class="productCard">
-        <div class="productImg img" style="background: url(./assets/img.png); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
-        <h3 class="productTitle">
-          Muerto
-        </h3>
-        <section class="productDetails">
-          <p class="productPrice">$ 60,00</p>
-          <img src="./assets/trash.png" class="trashImg" alt="trash">
-        </section>
-      </li>
-    </ul>
+    <ul class="productList"></ul>
     <section class="modalBackground">
       <div class="modal">
         <h1>AGREGAR PRODUCTO:</h1>
@@ -69,4 +48,8 @@
     </div>
   </footer>
 </body>
+<script type="module" src="./constants/const.js"></script>
+<script type="module" src="./api/crud.js"></script>
+<script type="module" src="./utils/dom.js"></script>
+<script type="module" src="./js/index.js"></script>
 </html>
