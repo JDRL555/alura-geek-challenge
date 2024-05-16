@@ -3,11 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Alura Geek</title>
 </head>
 <body>
-  <h1>Alura Geek</h1>
+  <header class="header">
+    <img class="hearts" src="./assets/hearts.png" alt="Hearts">
+    <h1>AluraGeek</h1>
+  </header>
+  <main>
+    <section class="titleContainer">
+      <h2>Mis productos</h2>
+      <span>+</span>
+    </section>
+    <ul class="productList">
+      <li class="productCard">
+        <div class="productImg img" style="background: url(./assets/cuchao.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <h3 class="productTitle">
+          Cuchao
+        </h3>
+        <section class="productDetails">
+          <p class="productPrice">$ 20,00</p>
+          <img src="./assets/trash.png" class="trashImg" alt="trash">
+        </section>
+      </li>
+      <li class="productCard">
+        <div class="productImg img" style="background: url(./assets/img.png); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <h3 class="productTitle">
+          Muerto
+        </h3>
+        <section class="productDetails">
+          <p class="productPrice">$ 60,00</p>
+          <img src="./assets/trash.png" class="trashImg" alt="trash">
+        </section>
+      </li>
+    </ul>
+    <section class="modalBackground">
+      <div class="modal">
+        <h1>AGREGAR PRODUCTO:</h1>
+        <form action="">
+          <input type="text" placeholder="nombre...">
+          <input type="text" placeholder="precio...">
+          <input type="text" placeholder="imagen...">
+          <div class="btnContainer">
+            <button class="btnEnviar">Enviar</button>
+            <button class="btnLimpiar">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footerSpan">
+      <img class="hearts" src="./assets/hearts.png" alt="Hearts">
+      <h1>AluraGeek</h1>
+    </div>
+    <div class="footerDetails">
+      <h3>Desarrollado por Joshua Rodríguez</h3>
+      <p>Alura latam - 2024</p>
+    </div>
+  </footer>
 </body>
 </html>

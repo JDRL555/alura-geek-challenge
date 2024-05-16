@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary-color: #5300C8;
+  --secondary-color: #9303A6;
+  --third-color: #03318C;
+
+  --primary-font: "Press Start 2P", system-ui;
+  --secondary-font: "IBM Plex Mono", monospace;
+
+  font-family: var(--primary-font);
+  font-weight: 200;
+  font-style: normal;
+}
