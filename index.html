@@ -19,16 +19,19 @@
   <main>
     <section class="titleContainer">
       <h2>Mis productos</h2>
-      <span>+</span>
+      <label for="modalInput" id="modalLabel">+</label>
+      <input type="checkbox" id="modalInput">
     </section>
     <ul class="productList"></ul>
-    <section class="modalBackground">
-      <div class="modal">
+    <section class="modalBackground" id="modalBackground">
+      <div class="modal" id="modal">
+        <label for="modalClose" id="modalLabelClose">X</label>
+        <input type="checkbox" id="modalClose">
         <h1>AGREGAR PRODUCTO:</h1>
-        <form action="">
-          <input type="text" placeholder="nombre...">
-          <input type="text" placeholder="precio...">
-          <input type="text" placeholder="imagen...">
+        <form>
+          <input type="text" id="title" required placeholder="nombre...">
+          <input type="number" id="price" required placeholder="precio...">
+          <input type="text" pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.net|.gov|.org|.in)(\/[^\s]*)?" id="img" required placeholder="URL de la imagen...">
           <div class="btnContainer">
             <button class="btnEnviar">Enviar</button>
             <button class="btnLimpiar">Limpiar</button>
