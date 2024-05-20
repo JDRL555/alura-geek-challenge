@@ -1,4 +1,4 @@
-import { createProduct } from '../api/crud.js'
+import { createProduct, deleteProduct } from '../api/crud.js'
 
 export async function onSubmit(e) {
   e.preventDefault();
@@ -8,21 +8,27 @@ export async function onSubmit(e) {
 
   
   const newProduct = {
-    title, price, img
+    title, price: parseInt(price), img
   }
   
   await createProduct(newProduct)
 }
 
-export async function onOpenModal(e) {
-  const modalBackground = document.querySelector("#modalBackground")
+export async function onDelete(e) {
+  const deleteMsg = document.querySelector("#deleteMsg")
+  const id = deleteMsg.innerHTML.split(" ")[5].split("")[0]
+  await deleteProduct(parseInt(id))
+}
+
+export async function onOpenModal(selector) {
+  const modalBackground = document.querySelector(selector)
 
   modalBackground.style.visibility = "visible"
   modalBackground.style.opacity = 1
 }
 
-export async function onCloseModal(e) {
-  const modalBackground = document.querySelector("#modalBackground")
+export async function onCloseModal(selector) {
+  const modalBackground = document.querySelector(selector)
 
   modalBackground.style.visibility = "hidden"
   modalBackground.style.opacity = 0

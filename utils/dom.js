@@ -10,6 +10,8 @@ export function createProductCard(product) {
   const trashImg = document.createElement("img")
 
   productCard.setAttribute("class", "productCard")
+  productCard.setAttribute("id", product.id)
+
   productImg.setAttribute("class", "productImg")
   productTitle.setAttribute("class", "productTitle")
   productDetails.setAttribute("class", "productDetails")
@@ -26,6 +28,11 @@ export function createProductCard(product) {
 
   trashImg.src = "./assets/trash.png"
   trashImg.alt = "trash icon"
+
+  trashImg.setAttribute("id", product.id)
+  trashImg.setAttribute("class", "trash_icon")
+
+  trashImg.style.cursor = "pointer"
 
   productDetails.append(productPrice)
   productDetails.append(trashImg)

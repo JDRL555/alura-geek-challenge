@@ -26,12 +26,12 @@ main h2 {
 }
 
 .titleContainer input[type="checkbox"],
-#modalClose {
+#modalClose, #modalDeleteClose {
   display: none;
 }
 
 .titleContainer label,
-#modalLabelClose {
+#modalLabelClose, #modalDeleteLabelClose {
   font-size: 30px;
   margin: 0 10px;
   background-color: var(--primary-color);
@@ -42,26 +42,26 @@ main h2 {
   transition: .5s;
 }
 
-#modalLabelClose {
+#modalLabelClose, #modalDeleteLabelClose {
   position: absolute;
   right: 0;
   top: 10px;
 }
 
 .titleContainer label:hover,
-#modalLabelClose:hover {
+#modalLabelClose:hover, #modalDeleteLabelClose:hover {
   background-color: var(--secondary-color);
 }
 
 .productList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   row-gap: 30px;
   margin-bottom: 60px;
 }
 
 .productCard {
-  width: 80%;
+  width: 270px;
   color: white;
   padding: 10px;
   border: 4px solid black;
@@ -129,6 +129,7 @@ main h2 {
   border: 4px solid black;
   width: 40%;
   text-align: center;
+  padding: 20px;
 }
 
 .modal h1 {
@@ -140,7 +141,6 @@ main h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 20px;
   font-family: var(--secondary-font);
 }
 
