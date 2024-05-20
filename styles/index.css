@@ -1,0 +1,221 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--primary-color);
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+}
+
+main h2 {
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 30px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleContainer input[type="checkbox"],
+#modalClose, #modalDeleteClose {
+  display: none;
+}
+
+.titleContainer label,
+#modalLabelClose, #modalDeleteLabelClose {
+  font-size: 30px;
+  margin: 0 10px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .5s;
+}
+
+#modalLabelClose, #modalDeleteLabelClose {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.titleContainer label:hover,
+#modalLabelClose:hover, #modalDeleteLabelClose:hover {
+  background-color: var(--secondary-color);
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  row-gap: 30px;
+  margin-bottom: 60px;
+}
+
+.productCard {
+  width: 270px;
+  color: white;
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  background-color: var(--primary-color);
+  transition: .3s;
+}
+
+.productCard:hover {
+  background-color: var(--secondary-color);
+}
+
+.productImg {
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+
+.productTitle {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.trashImg {
+  width: 30px;
+  cursor: pointer;
+}
+
+.modalBackground {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: .5s;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  border: 4px solid black;
+  width: 40%;
+  text-align: center;
+  padding: 20px;
+}
+
+.modal h1 {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--secondary-font);
+}
+
+.modal input {
+  padding: 15px;
+  margin: 10px 0;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  border: 3px solid var(--third-color);
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+.modal input::placeholder {
+  color: var(--third-color);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.modal .btnContainer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal button {
+  font-size: 20px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal .btnEnviar {
+  background-color: var(--third-color);
+  border: none;
+  color: white;
+}
+
+.modal .btnLimpiar {
+  border: 3px solid var(--third-color);
+  color: var(--third-color);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footerSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footerDetails {
+  font-family: var(--secondary-font);
+}
+
+.footerDetails h3,
+.footerDetails p {
+  margin: 0;
+}
+
+.footerDetails h3 {
+  font-weight: 400;
+}
+
+.footerDetails p {
+  margin-top: 10px;
+}

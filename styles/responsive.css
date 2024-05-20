@@ -1,0 +1,14 @@
+@media screen and (width <= 768px) {
+  .modal {
+    width: 80%;
+  }
+}
+
+@media screen and (width <= 425px) {
+  .header {
+    width: 100vw;
+  }
+  .header h1 {
+    font-size: 14px;
+  }
+}
